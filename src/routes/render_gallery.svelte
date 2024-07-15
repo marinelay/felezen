@@ -20,7 +20,6 @@
     let listOfImages = [];
 
     onMount(() => {
-        // JSON 데이터의 길이를 기준으로 총 페이지 수를 계산
         totalPages = Math.ceil(images.length / itemsPerPage);
         completePages = Array.from({ length: totalPages }, (_, i) => {
             return {
@@ -56,7 +55,7 @@
             }
 
             if (page.name === 1 && activeUrl === null) {
-                curPages[0].active = true;
+                pages[0].active = true;
             }
         });
 
